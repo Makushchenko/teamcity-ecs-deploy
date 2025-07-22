@@ -181,3 +181,33 @@ aws ecs describe-services --cluster "${CLUSTER_NAME}" --services "${SERVICE_NAME
 # Deregister old, unused TDs (optional cleanup)
 aws ecs deregister-task-definition --task-definition <arn>
 ```
+
+---
+
+## Useful AWS ECS Links
+
+- AWS CLI: `ecs register-task-definition`  
+  https://docs.aws.amazon.com/cli/latest/reference/ecs/register-task-definition.html
+
+- AWS CLI: `ecs update-service`  
+  https://docs.aws.amazon.com/cli/latest/reference/ecs/update-service.html
+
+- AWS CLI: waiters (`services-stable`, etc.)  
+  https://docs.aws.amazon.com/cli/latest/reference/ecs/wait/index.html
+
+- Amazon ECS task definitions (concepts & JSON fields)  
+  https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definitions.html
+
+- Listing and describing task definitions/services  
+  https://docs.aws.amazon.com/cli/latest/reference/ecs/list-task-definitions.html  
+  https://docs.aws.amazon.com/cli/latest/reference/ecs/describe-services.html
+
+- JetBrains guide
+  https://www.jetbrains.com/help/teamcity/install-teamcity-agent.html#Install+from+ZIP+File
+  https://www.jetbrains.com/help/teamcity/configure-agent-installation.html
+
+- Register new task definition
+  https://doylew.medium.com/updating-aws-ecs-task-definition-and-scheduled-tasks-using-aws-cli-commands-through-deployment-jobs-7cef82262236
+
+- Update service with new task definition
+  https://devops4solutions.com/how-to-update-aws-ecs-service/
