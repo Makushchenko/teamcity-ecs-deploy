@@ -202,12 +202,12 @@ aws ecs deregister-task-definition --task-definition <arn>
   https://docs.aws.amazon.com/cli/latest/reference/ecs/list-task-definitions.html  
   https://docs.aws.amazon.com/cli/latest/reference/ecs/describe-services.html
 
-- JetBrains guide
+- JetBrains guide  
   https://www.jetbrains.com/help/teamcity/install-teamcity-agent.html#Install+from+ZIP+File
   https://www.jetbrains.com/help/teamcity/configure-agent-installation.html
 
-- Register new task definition
+- Register new task definition  
   https://doylew.medium.com/updating-aws-ecs-task-definition-and-scheduled-tasks-using-aws-cli-commands-through-deployment-jobs-7cef82262236
 
-- Update service with new task definition
+- Update service with new task definition  
   https://devops4solutions.com/how-to-update-aws-ecs-service/
