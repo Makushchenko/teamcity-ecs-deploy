@@ -1,0 +1,285 @@
+  271  docker run -e SERVER_URL=http://localhost:8081  \ \n    -v teamcity-agent-conf:/data/teamcity_agent/conf  \      \n    jetbrains/teamcity-agent
+  272  docker run -e SERVER_URL="http://localhost:8081"  \ \n    -v teamcity-agent-conf:/data/teamcity_agent/conf  \      \n    jetbrains/teamcity-agent
+  273  docker run -e SERVER_URL="http://localhost:8081"  \ \n    -v teamcityagent:/data/teamcity_agent/conf  \      \n    jetbrains/teamcity-agent
+  274  docker run -e SERVER_URL="http://localhost:8081" -v teamcityagent:/data/teamcity_agent/conf jetbrains/teamcity-agent
+  275  docker run -e SERVER_URL="http://0.0.0.0:8081" -v teamcityagent:/data/teamcity_agent/conf jetbrains/teamcity-agent
+  276  docker ps
+  277  docker inspect 0f31edb3947d
+  278  curl http://172.17.0.2:8111
+  279  curl http://172.17.0.2:8081
+  280  curl http://172.17.0.2:8111
+  281  docker run -e SERVER_URL="http://172.17.0.2:8111" -v teamcityagent:/data/teamcity_agent/conf jetbrains/teamcity-agent
+  283  docker run --network 
+  285  docker network ls
+  286  docker network inspect host
+  287  docker run --name teamcity-server-instance  \\n    -v teamcity-datadir:/data/teamcity_server/datadir \\n    -v teamcity-logs:/opt/teamcity/logs  \\n    -p 8081:8111 --network host \\n    jetbrains/teamcity-server\n
+  289  docker ps -a
+  290  docker container rm 0f31edb3947d
+  291  docker run --name teamcity-server-instance  \\n    -v teamcity-datadir:/data/teamcity_server/datadir \\n    -v teamcity-logs:/opt/teamcity/logs  \\n    -p 8081:8111 --network host \\n    jetbrains/teamcity-server\n
+  293  docker ps -o wide
+  294  docker container inspect df40f70df656
+  295  docker container inspect df40f70df656 | grep Ip
+  296  docker container inspect df40f70df656 | grep -B2 Ip
+  298  docker ps -a
+  299  docker container rm $(docker ps | grep jetbr | awk '{print $1}')
+  301  docker ps | grep jetbr | awk '{print $1}'
+  302  docker ps -a | grep jetbr | awk '{print $1}'
+  304  docker container rm $(docker ps -a | grep jetbr | awk '{print $1}')
+  305  docker ps -a | grep jetbr | awk '{print $1}'
+  306  docker ps -a
+  307  sudo apt-get install default-jdk -y
+  308  java -version 
+  309  docker ls
+  310  docker image ls
+  311  docker image rm jetbrains/teamcity-server
+  312  ls
+  313  ls team-city
+  314  rm -r team-city
+  315  ls Downloads
+  316  mv Downloads/TeamCity-2020.1.tar.gz .
+  317  ls
+  318  tar -xzf TeamCity-2020.1.tar.gz 
+  319  ls
+  320  ./TeamCity/bin/runAll.sh start
+  321  ./TeamCity/bin/runAll.sh stop
+  322  .TeamCity/bin/teamcity-server.sh
+  323  ./TeamCity/bin/teamcity-server.sh
+  324  ./TeamCity/bin/teamcity-server.sh start
+  325  ip addr
+  326  ip link
+  327  ip route
+  328  route
+  329  docker run -e SERVER_URL="http://192.168.49.1:8111" -v teamcityagent:/data/teamcity_agent/conf jetbrains/teamcity-agent
+  330  docker run -e SERVER_URL=http://192.168.49.1:8111 -v teamcityagent:/data/teamcity_agent/conf jetbrains/teamcity-agent
+  331  ip addr
+  333  ssh -i "example-key.pem" ubuntu@52.52.52.52
+  335  ./TeamCity/bin/teamcity-server.sh stop
+  336  docker image ls
+  337  ssh -i "example-key.pem" ubuntu@54.54.54.54
+  338  docker run -e SERVER_URL="http://54.54.54.54:8111" -v teamcityagent:/data/teamcity_agent/conf jetbrains/teamcity-agent
+  339  ssh -i "example-key.pem" ubuntu@94.94.94.94
+  340  docker image ls
+  341  docker image rmi fd9d61f5a0f0
+  342  docker ps -a
+  343  docker ps | grep jet
+  344  docker ps -a | grep jet
+  345  docker ps -a | grep jet | awk '{print $1}'
+  346  docker container rm $(docker ps -a | grep jet | awk '{print $1}')
+  347  docker ps -a
+  348  docker container rm $(docker ps -a | grep ngin | awk '{print $1}')
+  349  docker container rm $(docker ps -a | grep hello | awk '{print $1}')
+  350  docker ps -a
+  351  docker image ls
+  352  docker image rmi fd9d61f5a0f0
+  353  docker image ls
+  354  docker image rmi 55f4b40fe486
+  355  docker image rmi feb5d9fea6a5
+  356  docker image ls
+  357  docker ps
+  358  docker ps -a
+  359  sudo apt-get update
+  360  sudo apt-get upgrade
+  361  sudo add-apt-repository ppa:ubuntuhandbook1/keepass2
+  362  sudo apt update
+  363  sudo apt install keepass2
+  364  ssh -i "example-key.pem" ubuntu@62.62.62.62
+  369  sudo apt-get update
+  370  sudo apt-get upgrade
+  371  sudo curl -Lo /usr/local/bin/ecs-cli https://amazon-ecs-cli.s3.amazonaws.com/ecs-cli-linux-amd64-latest
+  372  sudo apt-get install gpg
+  373  echo $PATH
+  374  gpg
+  375  ls
+  376  cd /usr/local/bin/
+  377  ls
+  378  sudo apt autoremove gpg
+  379  sudo apt-get install gpg
+  380  echo $PATH
+  381  sudo apt-get install gnupg
+  382  vi public_key_filename.txt
+  389  ls
+  390  clear
+  392  vi public_key_filename.txt
+  393  gpg --import public_key_filename.txt
+  394  curl -Lo ecs-cli.asc https://amazon-ecs-cli.s3.amazonaws.com/ecs-cli-linux-amd64-latest.asc
+  395  gpg --verify ecs-cli.asc /usr/local/bin/ecs-cli
+  396  sudo chmod +x /usr/local/bin/ecs-cli
+  397  ecs-cli --version
+  398  sudo apt-get update
+  399  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"\nunzip awscliv2.zip\nsudo ./aws/install
+  401  sudo ./aws/install
+  403  sudo ./aws/install --update
+  405  aws --version
+  406  aws configure
+  407  vi task-execution-assume-role.json
+  408  ecs-cli configure --cluster tutorial --default-launch-type FARGATE --config-name tutorial --region us-east-1
+  409  ecs-cli configure profile --access-key ************ --secret-key ******************** --profile-name tutorial-profile
+  410  ecs-cli up --cluster-config tutorial --ecs-profile tutorial-profile
+  411  ecs deploy
+  412  ecs-cli deploy
+  413  aws ec2 describe-security-groups --filters Name=vpc-id,Values=vpc-04cd4885cde510be2 --region us-east-1
+  414  aws ec2 authorize-security-group-ingress --group-id sg-0d9b46c4055b0a95f --protocol tcp --port 80 --cidr 0.0.0.0/0 --region us-east-1
+  415  vi docker-compose.yml
+  416  rm -f docker-compose.yml
+  418  vi docker-compose.yaml
+  421  cat <<EOF > docker-compose.yml\nversion: '3'\nservices:\n  web:\n    image: amazon/amazon-ecs-sample\n    ports:\n      - "80:80"\n    logging:\n      driver: awslogs\n      options: \n        awslogs-group: tutorial\n        awslogs-region: us-west-2\n        awslogs-stream-prefix: web\nEOF
+  422  cat docker-compose.yml
+  423  cat <<EOF > ecs-param.yml\nversion: 1\ntask_definition:\n  task_execution_role: ecsTaskExecutionRole\n  ecs_network_mode: awsvpc\n  os_family: Linux\n  task_size:\n    mem_limit: 0.5GB\n    cpu_limit: 256\nrun_params:\n  network_configuration:\n    awsvpc_configuration:\n      subnets:\n        - "subnet-084dbefcfea993016"\n        - "subnet-0dc318631ae05a2eb"\n      security_groups:\n        - "sg-0d9b46c4055b0a95f"\n      assign_public_ip: ENABLED\nEOF
+  424  ecs-cli compose --project-name tutorial service up --create-log-groups --cluster-config tutorial --ecs-profile tutorial-profile
+  425  vi ecs-param.yml
+  426  ecs-cli compose --project-name tutorial service down --cluster-config tutorial --ecs-profile tutorial-profile
+  427  ecs-cli down --force --cluster-config tutorial --ecs-profile tutorial-profile
+  432  aws ecs describe-task-definition 
+  433  aws ecs describe-task-definition --task-definition TEST-taskdefinition --region=”us-east-1"
+  434  aws ecs describe-task-definition --task-definition TEST-taskdefinition --region="us-east-1"
+  435  TASK_DEFINITION=$(aws ecs describe-task-definition --task-definition TEST-taskdefinition --region="us-east-1")
+  436  echo $TASK_DEFINITION
+  437  NEW_ECR_IMAGE=111111111111.dkr.ecr.us-east-1.amazonaws.com/teamcity:latest
+  438  echo $NEW_IMAGE
+  439  echo $NEW_ECR_IMAGE
+  440  sudo apt-get update
+  441  sudo apt-get install jq
+  442  jq '.containerDefinitions[0].image='\"${ NEW_ECR_IMAGE }\" \ 
+  443  echo $ TASK_DEFINITION | jq '.containerDefinitions[0].image='\"${ NEW_ECR_IMAGE }\" \ 
+  444  echo $ TASK_DEFINITION | jq '.containerDefinitions[0].image='\"${ NEW_ECR_IMAGE }\"\ > task-def.json
+  446  echo $TASK_DEFINITION | jq '.containerDefinitions[0].image='\"${ NEW_ECR_IMAGE }\"\ > task-def.json
+  447  echo $TASK_DEFINITION | jq '.containerDefinitions[0].image' > task-def.json
+  448  cat task-def.json
+  449  echo $TASK_DEFINITION
+  451  echo $TASK_DEFINITION | jq .containerDefinitions[0].image
+  452  echo $TASK_DEFINITION | jq .containerDefinitions[*].image
+  453  echo $TASK_DEFINITION | jq .
+  454  echo $TASK_DEFINITION | jq $.taskDefinition.containerDefinitions[*].image
+  455  echo $TASK_DEFINITION | jq $.taskDefinition.containerDefinitions[*]
+  456  echo $TASK_DEFINITION | jq .taskDefinition.containerDefinitions[*]
+  457  echo $TASK_DEFINITION | jq $.taskDefinition.containerDefinitions[*]
+  458  echo $TASK_DEFINITION | jq $.taskDefinition.containerDefinitions[0]
+  459  echo $TASK_DEFINITION | jq $.taskDefinition.containerDefinitions[1]
+  460  echo $TASK_DEFINITION | jq .containerDefinitions[0].image
+  461  echo $TASK_DEFINITION | jq ".containerDefinitions[0].image"
+  462  echo $TASK_DEFINITION | jq .taskDefinitionArn
+  463  echo $TASK_DEFINITION | jq ".taskDefinitionArn"
+  464  echo $TASK_DEFINITION | jq $.taskDefinition.taskDefinitionArn
+  465  echo $TASK_DEFINITION | jq $.taskDefinitionArn
+  466  echo $TASK_DEFINITION | jq .taskDefinitionArn
+  467  echo $TASK_DEFINITION | jq .taskDefinitionArn > test.txt
+  468  cat test.txt
+  469  echo $TASK_DEFINITION | jq '.taskDefinitionArn'
+  470  echo $TASK_DEFINITION | jq '.'
+  471  echo $TASK_DEFINITION | jq '.taskDefinition.'
+  472  echo $TASK_DEFINITION | jq '.taskDefinition'
+  473  echo $TASK_DEFINITION | jq '.taskDefinition.containerDefinitions[0]'
+  474  echo $TASK_DEFINITION | jq '.taskDefinition.containerDefinitions[0].image'
+  475  NEW_ECR_IMAGE=111111111111.dkr.ecr.us-east-1.amazonaws.com/teamcity:35
+  476  echo $TASK_DEFINITION | jq '.taskDefinition.containerDefinitions[0].image='\"${ NEW_ECR_IMAGE }\" 
+  477  echo $TASK_DEFINITION | jq '.taskDefinition.containerDefinitions[0].image='$NEW_ECR_IMAGE 
+  478  echo $TASK_DEFINITION | jq '.taskDefinition.containerDefinitions[0].image='$NEW_ECR_IMAGE \n: 1657701815:0;echo $TASK_DEFINITION | jq '.taskDefinition.containerDefinitions[0].image='\"${ NEW_ECR_IMAGE }\" \ 
+  479  echo $TASK_DEFINITION | jq '.taskDefinition.containerDefinitions[0].image='\"${ NEW_ECR_IMAGE }\" \ > task-def.json
+  480  echo $TASK_DEFINITION | jq '.taskDefinition.containerDefinitions[0].image='\"${ NEW_ECR_IMAGE }\"\ > task-def.json
+  481  echo $TASK_DEFINITION | jq '.taskDefinition.containerDefinitions[0].image='\"${ NEW_ECR_IMAGE }\"\> task-def.json
+  482  echo $TASK_DEFINITION | jq '.taskDefinition.containerDefinitions[0].image='\"${NEW_ECR_IMAGE}\"\> task-def.json
+  483  echo $TASK_DEFINITION | jq '.taskDefinition.containerDefinitions[0].image='\"${NEW_ECR_IMAGE}\"\>task-def.json
+  484  echo $TASK_DEFINITION | jq '.taskDefinition.containerDefinitions[0].image='\"${NEW_ECR_IMAGE}\" > task-def.json
+  485  cat task-def.json
+  486  aws ecs register-task-definition --family TEST-taskdefinition --region=”us-east-1" --cli-input-json file://task-def.json
+  487  aws ecs register-task-definition --family TEST-taskdefinition --region="us-east-1" --cli-input-json file://task-def.json
+  488  aws ecs register-task-definition --family="TEST-taskdefinition" --region="us-east-1" --cli-input-json file://task-def.json
+  489  cat task-def.json
+  490  aws ecs register-task-definition -h
+  491  aws ecs register-task-definition --family "TEST-taskdefinition" --region="us-east-1" --cli-input-json file://task-def.json
+  492  aws ecs register-task-definition --family "TEST-taskdefinition"
+  493  aws ecs register-task-definition --family TEST-taskdefinition
+  496  cat task-def.json
+  497  echo $TASK_DEFINITION > task-def.json
+  498  cat task-def.json
+  499  aws ecs register-task-definition --family "TEST-taskdefinition" --region="us-east-1" --cli-input-json file://task-def.json
+  500  echo $TASK_DEFINITION | jq '.' > task-def.json
+  501  cat task-def.json
+  502  echo $TASK_DEFINITION | jq '.'
+  503  aws ecs register-task-definition --family "TEST-taskdefinition" --region="us-east-1" --cli-input-json file://task-def.json
+  504  aws ecs register-task-definition --family "TEST-taskdefinition:1" --region="us-east-1" --cli-input-json file://task-def.json
+  505  aws ecs describe-task-definition --task-definition TEST-taskdefinition:1 --region=”us-east-1"
+  506  aws ecs describe-task-definition --task-definition TEST-taskdefinition:1 --region="us-east-1"
+  507  TASK_DEFINITION=$(aws ecs describe-task-definition --task-definition TEST-taskdefinition:1 --region="us-east-1")
+  508  echo $TASK_DEFINITION
+  509  echo $TASK_DEFINITION | jq '.containerDefinitions[0].image='\"${NEW_ECR_IMAGE}\" > task-def.json
+  510  cat task-def.json
+  511  echo $NEW_ECR_IMAGE
+  512  rm -f task-def.json
+  513  ls
+  514  echo $TASK_DEFINITION | jq '.containerDefinitions[0].image='\"${NEW_ECR_IMAGE}\"
+  515  echo $TASK_DEFINITION | jq '.containerDefinitions[0].image='\"${NEW_ECR_IMAGE}\"\ > task-def.json
+  516  cat task-def.json
+  517  aws ecs register-task-definition --family "TEST-taskdefinition:1" --region="us-east-1" --cli-input-json file://task-def.json
+  518  vi task-def.json
+  519  echo $TASK_DEFINITION | jq '.taskDefinition.containerDefinitions[0].image='\"${NEW_ECR_IMAGE}\"\ > task-def.json
+  520  cat task-def.json
+  521  aws ecs register-task-definition --family "TEST-taskdefinition:1" --region="us-east-1" --cli-input-json file://task-def.json
+  522  echo $TASK_DEFINITION | jq '.containerDefinitions[0].image='\"${NEW_ECR_IMAGE}\"
+  523  echo $TASK_DEFINITION | jq '.containerDefinitions[0].image
+  524  echo $TASK_DEFINITION | jq '.containerDefinitions[0].image'
+  525  echo $TASK_DEFINITION | jq '$.taskDefinition.containerDefinitions[0].image'
+  526  echo $TASK_DEFINITION | jq '.taskDefinition.containerDefinitions[0].image'
+  527  echo $TASK_DEFINITION | jq '.taskDefinition.containerDefinitions[0].image' > task-def.json
+  528  cat task-def.json
+  529  echo $TASK_DEFINITION | jq '.containerDefinitions[0].image' > task-def.json
+  530  cat task-def.json
+  531  echo $TASK_DEFINITION | jq '.containerDefinitions[0].image='\"${NEW_ECR_IMAGE}\" > task-def.json
+  532  cat task-def.json
+  533  echo $TASK_DEFINITION | jq '.containerDefinitions[0].image='\"${NEW_ECR_IMAGE}\"\ > task-def.json
+  534  cat task-def.json
+  535  echo $TASK_DEFINITION | jq '.containerDefinitions[0].image='\"${NEW_ECR_IMAGE}\"\>task-def.json
+  536  echo $TASK_DEFINITION | jq '.containerDefinitions[0].image='\"${NEW_ECR_IMAGE}\"\> task-def.json
+  537  echo $TASK_DEFINITION | jq '.containerDefinitions[0].image='\"${NEW_ECR_IMAGE}\"\ > task-def.json
+  538  cat task-def.json
+  539  aws ecs register-task-definition --family "TEST-taskdefinition:1" --region="us-east-1" --cli-input-json file://task-def.json
+  540  aws ecs register-task-definition --family TEST-taskdefinition:1 --region="us-east-1" --cli-input-json file://task-def.json
+  541  aws ecs register-task-definition --family TEST-taskdefinition --region="us-east-1" --cli-input-json file://task-def.json
+  542  echo $TASK_DEFINITION | jq '.containerDefinitions[0].image='\"${NEW_ECR_IMAGE}\"\ > task-def.json
+  543  aws ecs register-task-definition --family TEST-taskdefinition --region="us-east-1" --cli-input-json file://task-def.json
+  544  echo $TASK_DEFINITION | jq '.containerDefinitions[0].image='\"${NEW_ECR_IMAGE}\"\ > task-def.json
+  545  aws ecs register-task-definition --family TEST-taskdefinition --region="us-east-1" --cli-input-json file://task-def.json
+  546  aws ecs describe-task-definition --task-definition TEST-taskdefinition | jq '.taskDefinition.revision'
+  547  aws ecs register-task-definition --family TEST-taskdefinition --region="us-east-1" --cli-input-json file://task-def.json
+  548  echo $TASK_DEFINITION | jq '.containerDefinitions[0].image='\"${NEW_ECR_IMAGE}\"\ 
+  549  echo $NEW_ECR_IMAGE
+  550  NEW_ECR_IMAGE="111111111111.dkr.ecr.us-east-1.amazonaws.com/teamcity:167"
+  551  echo $NEW_ECR_IMAGE
+  552  NEW_ECR_IMAGE="111111111111.dkr.ecr.us-east-1.amazonaws.com/teamcity:300"
+  553  aws ecs register-task-definition --family TEST-taskdefinition --region="us-east-1" --cli-input-json file://task-def.json
+  554  export $NEW_ECR_IMAGE
+  555  echo $NEW_ECR_IMAGE
+  556  cat task-def.json
+  557  aws ecs register-task-definition --family TEST-taskdefinition --region="us-east-1" --cli-input-json file://task-def.json -v
+  558  aws ecs register-task-definition --family TEST-taskdefinition --region="us-east-1" --cli-input-json file://task-def.json --verbose
+  559  aws ecs register-task-definition --family TEST-taskdefinition --region="us-east-1" --cli-input-json file://task-def.json
+  560  echo $TASK_DEFINITION | jq '.containerDefinitions[0].image='\"${NEW_ECR_IMAGE}\"\ 
+  561  echo $TASK_DEFINITION | jq '.containerDefinitions[0].image='\"${NEW_ECR_IMAGE}\"
+  562  echo $TASK_DEFINITION | jq '.containerDefinitions[0].image='
+  563  echo $TASK_DEFINITION | jq '.containerDefinitions[0].image'
+  564  echo $TASK_DEFINITION | jq '$.containerDefinitions[0].image'
+  565  echo $TASK_DEFINITION | jq '.image'
+  566  echo $TASK_DEFINITION | jq '.'
+  567  TASK_DEFINITION=$(aws ecs describe-task-definition --task-definition TEST-taskdefinition --region="us-east-1")
+  568  echo $TASK_DEFINITION | jq '.'
+  569  cat task-def.json | jq '.'
+  570  cat task-def.json | jq '.containerDefinitions[0].image'
+  571  cat task-def.json | jq '.containerDefinitions[0].image='\"${NEW_ECR_IMAGE}\"
+  572  cat task-def.json | jq '.containerDefinitions[0].image='\"${NEW_ECR_IMAGE}\" > task-def.json
+  573  cat task-def.json
+  574  NEW_ECR_IMAGE="111111111111.dkr.ecr.us-east-1.amazonaws.com/teamcity:150"
+  575  cat task-def.json | jq '.containerDefinitions[0].image='\"${NEW_ECR_IMAGE}\" > task-def.json
+  576  cat task-def.json
+  577  cat task-def.json | jq '.containerDefinitions[0].image='\"${NEW_ECR_IMAGE}\" > task-def.json
+  578  NEW_ECR_IMAGE="111111111111.dkr.ecr.us-east-1.amazonaws.com/teamcity:266"
+  579  cat task-def.json | jq '.containerDefinitions[0].image='\"${NEW_ECR_IMAGE}\" > task-def.json
+  580  NEW_ECR_IMAGE="111111111111.dkr.ecr.us-east-1.amazonaws.com/teamcity:latest"
+  581  cat task-def.json | jq '.containerDefinitions[0].image='\"${NEW_ECR_IMAGE}\" > task-def.json
+  582  aws ecs register-task-definition --family TEST-taskdefinition --region="us-east-1" --cli-input-json file://task-def.json
+  583  echo $TASK_DEFINITION
+  584  aws ecs register-task-definition --family TEST-taskdefinition --region="us-east-1" --cli-input-json file://test-td.json
+  586  ssh -i "example-key.pem" ubuntu@3.3.3.3
+  587  NEW_ECR_IMAGE="111111111111.dkr.ecr.us-east-1.amazonaws.com/teamcity:latest"
+  588  aws ecs register-task-definition --family TEST-taskdefinition --region="us-east-1" --cli-input-json file://test-td.json
+  589  aws ecs update-service --cluster TEST-cluster --service TEST-service --force-new-deployment --region us-east-1
+  590  aws ecs update-service --cluster TEST-cluster --service TEST-service --task-definition TEST-taskdefinition --force-new-deployment --region us-east-1
